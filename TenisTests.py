@@ -40,7 +40,28 @@ class MyTestCase(unittest.TestCase):
         partido.jugador2Incrementar()
         self.assertEqual('0-15', partido.calcularPuntuacion())
 
+    def ventaja1(self):
+        partido = Tenis()
+        partido.jugador1Incrementar()
+        partido.jugador1Incrementar()
+        partido.jugador1Incrementar()
+        partido.jugador2Incrementar()
+        partido.jugador2Incrementar()
+        partido.jugador2Incrementar()
+        partido.jugador1Incrementar()
+        self.assertEqual('Av-40', partido.calcularPuntuacion())
 
+    def ventaja_iguales(self):
+        partido = Tenis()
+        partido.jugador1Incrementar()
+        partido.jugador1Incrementar()
+        partido.jugador1Incrementar()
+        partido.jugador2Incrementar()
+        partido.jugador2Incrementar()
+        partido.jugador2Incrementar()
+        partido.jugador1Incrementar()
+        partido.jugador1Restar()
+        self.assertEqual('40-40', partido.calcularPuntuacion())
 
 if __name__ == '__main__':
     unittest.main()
