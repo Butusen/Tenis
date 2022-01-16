@@ -9,6 +9,9 @@ class Tenis:
         }
     def calcularPuntuacion(self):
         return f'{self.map[self.puntuacionjug1]}-0'
+    def ganadorPunto(self):
+        if self.puntuacionjug1 == 4:
+            return "Gana Jugador 1"
     def jugador1Incrementar(self):
         self.puntuacionjug1 += 1
 
