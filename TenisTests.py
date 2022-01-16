@@ -27,13 +27,18 @@ class MyTestCase(unittest.TestCase):
         partido.jugador1Incrementar()
         self.assertEqual('40-0', partido.calcularPuntuacion())
 
-    def test_40nada(self):
+    def test_gana1(self):
         partido=Tenis()
         partido.jugador1Incrementar()
         partido.jugador1Incrementar()
         partido.jugador1Incrementar()
         partido.jugador1Incrementar()
         self.assertEqual('Gana Jugador 1', partido.ganadorPunto())
+
+    def nada15(self):
+        partido=Tenis()
+        partido.jugador2Incrementar()
+        self.assertEqual('0-15', partido.calcularPuntuacion())
 
 
 
