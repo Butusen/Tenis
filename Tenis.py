@@ -3,7 +3,8 @@ class Tenis:
         self.puntuacionjug1= 0
         self.map = {
             0: '0',
-            1: '15'
+            1: '15',
+            2: '30'
         }
     def calcularPuntuacion(self):
         return f'{self.map[self.puntuacionjug1]}-0'
